@@ -1,9 +1,7 @@
 // Import package for user input
 const readline = require("readline-sync");
 
-// =======================
 // QUESTIONS ARRAY (Objects)
-// =======================
 const questions = [
     {
         question: "What does HTML stand for?",
@@ -27,16 +25,15 @@ const questions = [
     }
 ];
 
-// =======================
 // VARIABLES
-// =======================
+
 let score = 0;
 let timeLimit = 30; // seconds
 let startTime;
 
-// =======================
+
 // START GAME FUNCTION
-// =======================
+
 function startGame() {
     console.log("🎮 Welcome to the Trivia Game!");
     console.log("You have 30 seconds to answer all questions.\n");
@@ -48,9 +45,9 @@ function startGame() {
     askQuestions();
 }
 
-// =======================
+
 // ASK QUESTIONS FUNCTION
-// =======================
+
 function askQuestions() {
 
     questions.forEach((q, index) => {
@@ -75,9 +72,8 @@ function askQuestions() {
     endGame();
 }
 
-// =======================
 // CHECK ANSWER FUNCTION
-// =======================
+
 function checkAnswer(userAnswer, correctAnswer) {
     if (userAnswer === correctAnswer) {
         console.log("✅ Correct!");
@@ -87,9 +83,9 @@ function checkAnswer(userAnswer, correctAnswer) {
     }
 }
 
-// =======================
+
 // END GAME FUNCTION
-// =======================
+
 function endGame() {
     console.log("\n🎉 Game Over!");
     console.log(`Your final score is: ${score}/${questions.length}`);
@@ -108,7 +104,6 @@ function endGame() {
     process.exit();
 }
 
-// =======================
 // START THE GAME
-// =======================
+
 startGame();
